@@ -8248,6 +8248,9 @@ $as_echo "$DEBUG_LEVEL" >&6; }
     elif test "x$OPENJDK_BUILD_OS" = xwindows; then
       OPENJ9_PLATFORM_CODE=wa64
       OPENJ9_BUILDSPEC="win_x86-64_cmprssptrs"
+    elif test "x$OPENJDK_BUILD_OS" = xmacosx; then
+      OPENJ9_PLATFORM_CODE=oa64
+      OPENJ9_BUILDSPEC="osx_x86-64"
     else
       as_fn_error $? "Unsupported OpenJ9 platform ${OPENJDK_BUILD_OS}!" "$LINENO" 5
     fi
